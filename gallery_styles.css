@@ -89,7 +89,7 @@
     /* ─── HERO BANNER ─── */
     .page-hero {
       min-height: 70vh; display: flex; flex-direction: column;
-      justify-content: flex-end; position: relative; overflow: hidden; padding-bottom: 80px;
+      justify-content: flex-end; position: relative; overflow: hidden; padding-top: 80px;
     }
     .ph-bg {
       position: absolute; inset: 0;
