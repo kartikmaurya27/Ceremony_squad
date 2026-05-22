@@ -558,8 +558,17 @@ document.querySelectorAll('.svc-pill').forEach(pill=>{
     document.querySelectorAll('.svc-card').forEach(card=>{
       const show=f==='all'||card.dataset.svc===f;
       card.style.transition='opacity .35s ease,transform .35s ease';
-      card.style.opacity=show?'1':'0.15';
-      card.style.transform=show?'':'scale(.97)';
+      if(show){
+        card.style.display='';
+        requestAnimationFrame(()=>{
+          card.style.opacity='1';
+          card.style.transform='scale(1)';
+        });
+      } else {
+        card.style.opacity='0';
+        card.style.transform='scale(.97)';
+        setTimeout(()=>{ if(card.style.opacity==='0') card.style.display='none'; },350);
+      }
     });
   });
 });
