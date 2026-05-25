@@ -784,10 +784,10 @@ textarea { resize: vertical; }
 }
 
 /* ---------- TESTIMONIALS ---------- */
-.testi-carousel { position: relative; overflow: hidden; }
+.testi-carousel { position: relative; overflow: hidden; padding: 0 10px; }
 .testi-track {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .testi-card {
@@ -795,8 +795,8 @@ textarea { resize: vertical; }
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   padding: 40px;
-  min-width: calc(50% - 12px);
-  flex-shrink: 0;
+  flex: 0 0 calc((100% - 20px) / 2);
+  max-width: calc((100% - 20px) / 2);
   position: relative;
   overflow: hidden;
 }
